@@ -1,14 +1,16 @@
 package org.tonny.testing.config;
 
+import org.apache.logging.log4j.LogManager;
+import org.springframework.context.ApplicationContextAware;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 
-
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+//        return new Class[0];
+        return new Class<?>[] {AppConfig.class};
     }
 
     @Override
